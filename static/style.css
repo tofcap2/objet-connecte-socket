@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+
+html, body {
+  background-color: #000;
+  box-sizing: content-box;
+  padding: 20px;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: #dad070;
+  margin: 0;
+}
+
+.container {
+	display: flex;
+}
+
+#status {
+	display: block;
+	font-size: 0.8em;
+	margin-top: 15px;
+}
+
+.mouvement{
+	width: 70%;
+}
+
+/*============TEMP=============*/
+
+.thermometer {
+  font-family: sans-serif;
+  color: #333;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 2em auto;
+  border-radius: 50%;
+  background-color: #EDEDED;
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.4);
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: rgba(255,170,0,1);
+  background: linear-gradient(to right, rgba(84,255,227,1) 0%, rgba(244,255,84,1) 35%, rgba(255,153,43,1) 69%, rgba(255,38,38,1) 100%);
+  box-shadow: inset 2px 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+.ring .dial-bottom {
+  position: relative;
+  top: 125px;
+  left: 50px;
+  width: 110px;
+  height: 110px;
+  background-color: #EDEDED;
+  border-radius: 0 0 0 95%;
+  transform: rotate(-45deg);
+}
+
+.pointer {
+  position: absolute;
+  top: -40px;
+  left: 65px;
+  width: 5px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFF;
+  border: solid 4px #FFF;
+  transform-origin: 6px 112px;
+  box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.25);
+}
+.pointer.central {
+  background-color: #FFAA00;
+  transform: rotate(30deg);
+}
+.pointer.basking {
+  background-color: #FF3C00;
+  transform: rotate(45deg);
+}
+
+.temperatureContainer {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  top: 39px;
+  left: 39px;
+  background-color: #FFF;
+  border-radius: 50%;
+  box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.25);
+  padding: 1em;
+  text-align: center;
+}
+
+.temperatureContainer .data {
+	font-size: 1.5em;
+	width: 100%;
+}
+
+.title {
+  font-size: 1em;
+}
+
+.temperature {
+  font-size: 1em;
+  margin-top: -.2em;
+  width: 30%;
+}
+.central {
+  color: #FFAA00;
+}
+.basking {
+  color: #FF3C00;
+}
+
+.degree {
+  font-size: 0.6em;
+  position: absolute;
+  margin-top: .2em;
+}
+
+/*============MOUVEMENT=============*/
+
+#RedAlert
+{
+  margin: auto;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+#RedAlertText
+{
+  position: relative;
+  top: -140px;
+  height: 172px;
+  padding-top: 0px;
+  color: #6f100f;
+  background-color: #000;
+  border: solid 12px #6f100f;
+  border-radius: 32px;
+  font-size: 7em;
+  font-weight: bold;
+  font-family: 'Michroma', sans-serif;
+  text-align: center;
+  animation: Text-Animation 1.0s ease-out infinite;
+}
+@keyframes Text-Animation
+{
+  0%   { color: #C00; }
+  100% { color: ; }
+}
+#RedAlertGraphics
+{
+  position: relative;
+  top: -546px;
+  left: 0;
+}
+#BarsContainer #UpperBars
+{
+  position: relative;
+  top:0px;
+  left: 177px;
+  margin: 0;
+  padding: 0;
+  width: 247px;
+  height: 155px;
+  animation: UpperBars-Animation 1.0s ease-out infinite;
+}
+@keyframes UpperBars-Animation
+{
+  0%   { top: 0px; }
+  100% { top: 170px; }
+}
+#BarsContainer #LowerBars
+{
+  position: relative;
+  top: 236px;
+  left: 177px;
+  margin: 0;
+  padding: 0;
+  width: 247px;
+  height: 155px;
+  animation: LowerBars-Animation 1.0s ease-out infinite;
+}
+@keyframes LowerBars-Animation
+{
+  0%   { top: 236px; }
+  100% { top: 66px; }
+}
+#BarsContainer .AlertBarSize
+{
+  width: 100%;
+  height: 23px;
+  margin-top: 8px;
+}
+#RedAlertUpperLeft,
+#RedAlertUpperRight,
+#RedAlertLowerLeft,
+#RedAlertLowerRight
+{
+  fill: #6f100f;
+}
+#RedAlert .Red1
+{
+  background-color: #341115;
+}
+#RedAlert .Red2
+{
+  background-color: #461112;
+}
+#RedAlert .Red3
+{
+  background-color: #531011;
+}
+#RedAlert .Red4
+{
+  background-color: #5d1214;
+}
+#RedAlert .Red5
+{
+  background-color: #6f100f;
+}
