@@ -9,14 +9,8 @@ $(function () {
 		$('#status').text('Déconnecté');
 	});
 
-	socket.on('alert', function (data) {
+	socket.on('lumen', function (data) {
     	$('#status').text('Connecté');
-        $('#RedAlert').attr("hidden", data);
-	});
-
-	socket.on('temperature', function (data) {
-    	$('#status').text('Connecté');
-        $('#tc').html(data[0].toString() + '°');
-        $('#tf').html(data[1].toString() + '°');
+        $('#tc').html(data.toString());
 	});
 });
